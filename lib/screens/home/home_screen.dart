@@ -7,47 +7,56 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150.0,
-      child: Row(
-        children: [
-          Image(
-            image: AssetImage(b1.image),
-            height: 180.0,
-            width: 130,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  b1.title,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22.0,
-                  ),
-                ),
-                Text(
-                  b1.isbn,
-                  style: const TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 15.0,
-                  ),
-                ),
-                Text(
-                  b1.price,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                    color: AppColors.kPrimaryColor,
-                  ),
-                ),
-              ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      child: SizedBox(
+        height: 150.0,
+        child: Row(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image(
+                image: AssetImage(b1.image),
+                height: 180.0,
+              ),
             ),
-          )
-        ],
+            const SizedBox(width: 15.0),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    b1.title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22.0,
+                    ),
+                  ),
+                  const SizedBox(height: 4.0),
+                  Text(
+                    b1.isbn,
+                    style: const TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 15.0,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  Text(
+                    b1.price,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      color: AppColors.kPrimaryColor,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

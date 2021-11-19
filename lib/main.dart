@@ -1,5 +1,6 @@
 import 'package:faucon_it_book/app_theme.dart';
 import 'package:faucon_it_book/screens/all_tabs/all_tabs.dart';
+import 'package:faucon_it_book/screens/register/register_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class FauconITBook extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Faucon Books',
       theme: themeData,
-      home: const AllTabs(),
+      //home: const AllTabs(),
+      home: RegistrationScreen(),
     );
   }
 }

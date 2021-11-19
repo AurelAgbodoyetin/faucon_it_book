@@ -23,4 +23,16 @@ ThemeData themeData = ThemeData(
       color: AppColors.kTertiaryColor,
     ),
   ),
+  inputDecorationTheme: const InputDecorationTheme(
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.all(
+        Radius.circular(10),
+      ),
+    ),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.all(
+        Radius.circular(10),
+      ),
+    ),
+  ),
 );
